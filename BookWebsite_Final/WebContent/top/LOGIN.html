@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body {
+      background-color: aqua;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+    }
+
+    p {
+      color: purple;
+      font-size: 18px;
+      font-family: cursive;
+      font-weight: bold;
+    }
+
+    div {
+      margin: 10px;
+    }
+
+    button {
+      background-color: green;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <p id="MainHeading">Enter Login Details:</p>
+
+  <form id="loginForm">
+    <div>
+      <label for="name">Login ID:</label>
+      <input type="text" id="name" name="name" >
+    </div>
+
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="pass" name="pass" >
+    </div>
+
+    <div>
+      <button type="submit" id="b">Login</button>
+    </div>
+
+    <p><a href="REGISTER.html">SignUp</a></p>
+    <p class="error" id="errorMsg"></p>
+  </form>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // prevent default form submission
+
+      const username = document.getElementById("name").value;
+      const password = document.getElementById("pass").value;
+      const errorMsg = document.getElementById("errorMsg");
+
+      try {
+        if (!username && !password) {
+          throw "Both fields are required!";
+        }
+      } catch (error) {
+        errorMsg.textContent = error;
+        return;
+      }
+      try {
+        if (!username && password) {
+          throw "username required!";
+        }
+      } catch (error) {
+        errorMsg.textContent = error;
+        return;
+      }
+      try {
+        if (username && !password) {
+          throw "password required!";
+        }
+      } catch (error) {
+        errorMsg.textContent = error;
+        return;
+      }
+      errorMsg.innerHTML="Login success"
+      alert("Confirm Login")
+
+      
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .header-container img {
+        max-height: 80px;
+    }
+    
+    marquee {
+        width: 100%;
+        font-size: 1rem;
+    }
+    
+    .nav-menu td {
+        display: block;
+        padding: 5px;
+    }
+    
+    .nav-menu a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .book-selection-table {
+        width: 90%;
+    }
+    
+    .book-selection-table select, 
+    .book-selection-table input[type="text"] {
+        width: 100%;
+    }
+    
+    .left-nav p {
+        margin: 15px 0;
+    }
+    
+    .right-frame img {
+        max-width: 150px;
+    }
+    
+    .form-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .department-page h1 {
+        font-size: 1.5rem;
+    }
+    
+    .right-frame h5 {
+        font-size: 1.1rem;
+    }
+    
+    .right-frame h4 {
+        font-size: 1rem;
+    }
+    
+    .header-container img {
+        max-height: 60px;
+    }
+}

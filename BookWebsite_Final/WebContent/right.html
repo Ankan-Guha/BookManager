@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* Page-specific styles */
+        .welcome-container {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .welcome-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .welcome-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .welcome-title {
+            color: #0d47a1;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .welcome-subtitle {
+            color: #c62828;
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .welcome-title {
+                font-size: 1.5rem;
+            }
+            
+            .welcome-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body class="welcome-page">
+    <div class="welcome-container">
+        <img src="images/book1.jpg" alt="Book Collection" class="welcome-image" loading="lazy">
+        <h5 class="welcome-title">Welcome to the Online Book Store!!!</h5>
+        <h4 class="welcome-subtitle">"A Huge Collection Of Engineering E-Books"</h4>
+    </div>
+</body>
+</html>
